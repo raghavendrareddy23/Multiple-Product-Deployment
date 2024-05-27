@@ -124,13 +124,9 @@ app.get("/auth/login/success", async (req, res) => {
 
 setupRoutes(app);
 
-const eCommerce_db = require('./eCommerceUtils/db');
-const Stores_db = require('./storesUtils/db');
-const Vendor_db = require('./vendorUtils/db');
+const connectDBProject2 = require('./utils/db.js');
 
-eCommerce_db();
-Stores_db();
-Vendor_db();
+connectDBProject2();
 
 const job = new cron.CronJob(
   "*/12 * * * *",

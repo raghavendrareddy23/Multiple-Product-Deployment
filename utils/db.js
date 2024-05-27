@@ -5,8 +5,8 @@ dotenv.config();
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.PROJECT3_DB_URI);
-    console.log("MongoDB Connected for Vendor DB");
+    await mongoose.connect(process.env.PROJECT_DB_URI);
+    console.log("MongoDB Connected");
   } catch (err) {
     console.error(err.message);
     process.exit(1);
